@@ -3,7 +3,7 @@ node_modules/
 
 # environment variables (VERY IMPORTANT)
 .env
-
+.pem
 # logs
 logs
 *.log
@@ -26,7 +26,6 @@ coverage/
 
 # vscode
 .vscode/
-
 # mac
 .AppleDouble
 .LSOverride
