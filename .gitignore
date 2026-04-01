@@ -1,0 +1,35 @@
+# dependencies
+node_modules/
+
+# environment variables (VERY IMPORTANT)
+.env
+
+# logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# build / temp
+dist/
+build/
+.tmp/
+.temp/
+
+# coverage
+coverage/
+
+# vscode
+.vscode/
+
+# mac
+.AppleDouble
+.LSOverride
+
+# misc
+*.swp
