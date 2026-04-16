@@ -1,7 +1,7 @@
 // const BASE = "http://localhost:3000/api/books";
 // const BASE = "http://98.84.15.203:3000/api/books";
 
-const BASE = `${window.location.origin}/api/books`;
+const BASE = `/api/books`;
 let currentPage = 1;
 let currentSearch = "";
 
