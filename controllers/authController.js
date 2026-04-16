@@ -3,10 +3,12 @@ import { hashPassword, comparePassword } from "../utils/passwordUtils.js";
 import { generateToken, verifyToken } from "../utils/generateToken.js";
 import { isValidEmail, isStrongPassword } from "../utils/validators.js";
 
+const VALID_DEPARTMENTS = ["IT", "EnTC", "ECE", "AIDS", "CE", "FY (COMMON)"];
+
 export const register = async (req, res) => {
     try {
-        const { name, email, password } = req.body;
-        if (!name || !email || !password) {
+        const { name, email, password, department } = req.body;
+        if (!name || !email || !password || !department) {
             return res.status(400).json({ message: "All fields required." });
         }
         if (!isValidEmail(email)) {
@@ -17,12 +19,15 @@ export const register = async (req, res) => {
                 message: "Password must be at least 6 characters and include uppercase, lowercase, and a number.",
             });
         }
+        if (!VALID_DEPARTMENTS.includes(department)) {
+            return res.status(400).json({ message: "Invalid department." });
+        }
         const existing = await User.findOne({ email });
         if (existing) {
             return res.status(409).json({ message: "Email already in use." });
         }
         const hashed = await hashPassword(password);
-        const user = new User({ name, email, password: hashed });
+        const user = new User({ name, email, password: hashed, department });
         await user.save();
         res.status(201).json({ message: "User registered successfully." });
     } catch (err) {

@@ -1,5 +1,4 @@
 import mongoose from "mongoose";
-import User from "./User.js";
 
 const bookSchema = new mongoose.Schema({
     title: {
@@ -43,6 +42,21 @@ const bookSchema = new mongoose.Schema({
     unitName: {
         type: String,
         required: true,
+    },
+    likeCount: {
+        type: Number,
+        default: 0,
+        min: 0,
+    },
+    dislikeCount: {
+        type: Number,
+        default: 0,
+        min: 0,
+    },
+    downloadCount: {
+        type: Number,
+        default: 0,
+        min: 0,
     },
     createdAt: {
         type: Date,

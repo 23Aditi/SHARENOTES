@@ -17,6 +17,11 @@ const userSchema = new mongoose.Schema({
         type: String,
         required: true,
     },
+    department: {
+        type: String,
+        required: true,
+        enum: ["IT", "EnTC", "ECE", "AIDS", "CE", "FY (COMMON)"],
+    },
     refreshToken: {
         type: String,
         default: null,

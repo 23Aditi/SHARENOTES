@@ -417,3 +417,18 @@ textarea.form-input { resize: vertical; min-height: 80px; }
         transition-duration: 0.01ms !important;
     }
 }
+/* Like / dislike card actions */
+.card-action.like:hover { color: var(--accent); background: var(--accent-dim); }
+.card-action.dislike:hover { color: var(--danger); background: var(--danger-dim); }
+.card-action.active-like { color: var(--accent) !important; background: var(--accent-dim) !important; }
+.card-action.active-dislike { color: var(--danger) !important; background: var(--danger-dim) !important; }
+
+/* View-mode active state in dropdown */
+#allNotesBtn.active, #myNotesBtn.active {
+    color: var(--accent);
+    background: var(--accent-dim) !important;
+}
+
+/* Department filter bar */
+#deptFilterBar { scrollbar-width: none; }
+#deptFilterBar::-webkit-scrollbar { display: none; }
