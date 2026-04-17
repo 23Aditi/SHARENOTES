@@ -1,6 +1,6 @@
 /* ===== Configuration ===== */
-const API_BASE = 'http://localhost:3000/api/books';
-const AUTH_BASE = 'http://localhost:3000/api/auth';
+const API_BASE = 'https://sharenotes-k3oa.onrender.com/api/books';
+const AUTH_BASE = 'https://sharenotes-k3oa.onrender.com/api/auth';
 
 /* ===== Auth Token Management ===== */
 function getAccessToken() { return localStorage.getItem('sn_access'); }
