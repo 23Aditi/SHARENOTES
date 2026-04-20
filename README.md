@@ -88,6 +88,8 @@ Pull requests are welcome! For major changes, please open an issue first to disc
 
 - [23Aditi](https://github.com/23Aditi)
 - [HarshalB9](https://github.com/HarshalB9)
+- [Swaraj49](https://github.com/Swaraj49)
+- [SamarthBajaj26](https://github.com/SamarthBajaj26)
 
 ---
 
