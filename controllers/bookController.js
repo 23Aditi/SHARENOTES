@@ -7,6 +7,8 @@ import User from "../models/User.js";
 const VALID_YEARS = ["FIRST YEAR", "SECOND YEAR", "THIRD YEAR", "FOURTH YEAR"];
 const VALID_DEPARTMENTS = ["IT", "EnTC", "ECE", "AIDS", "CE", "FY (COMMON)"];
 
+
+
 export const getUploadUrl = async (req, res) => {
     try {
         const { name, type } = req.query || req.body;
